@@ -16,7 +16,7 @@ class Runner {
 		Duck[] ducks = new Duck[] { new MallardDuck()
 									, new RedHeadDuck()
 									, new RubberDuck()
-									//, new DecoyDuck()		// ADD: DecoyDuck
+									, new DecoyDuck()		// ADD: DecoyDuck
 									};						// it quacks (as it inherits from Duck)
 		System.out.println();								// How to fix that?
 		
@@ -40,7 +40,7 @@ class Runner {
 				System.out.print("\t, and flys off: ");
 					((FlyingDuck)d).fly();				// the cast is required now though
 			}
-			System.out.println("\n\n");
+			System.out.println("\n");
 		}
 	}
 }
