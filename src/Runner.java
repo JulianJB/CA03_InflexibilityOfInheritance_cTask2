@@ -40,7 +40,7 @@ class Runner {
 				System.out.print("\t, and flys off: ");
 					((FlyingDuck)d).fly();				// the cast is required now though
 			}
-			System.out.println("\n");
+			System.out.println();
 		}
 	}
 }

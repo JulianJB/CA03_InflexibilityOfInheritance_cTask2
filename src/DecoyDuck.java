@@ -1,13 +1,12 @@
 /*
  * ADDED: this class to represent a DecoyDuck
  */
-class DecoyDuck extends Duck { //extends FlyingDuck { //?
+class DecoyDuck extends NonFlyingNonQuackingDuck { //extends FlyingDuck { //?
 
     @Override
     void display() {
         System.out.println("DecoyDuck floats on the water");
     }
-
 }
 /*
  * This time, instead of trying the approach to
