@@ -13,10 +13,10 @@ class Runner {
 		System.out.println("Welcome to the duck show");
 		System.out.println("On display today...");
 		
-		Duck[] ducks = new Duck[]{ 	new MallardDuck()
+		Duck[] ducks = new Duck[] { new MallardDuck()
 									, new RedHeadDuck()
 									, new RubberDuck()
-									//, new DecoyDuck()		//ADD: DecoyDuck						
+									//, new DecoyDuck()		// ADD: DecoyDuck
 									};						// it quacks (as it inherits from Duck)
 		System.out.println();								// How to fix that?
 		
@@ -24,9 +24,9 @@ class Runner {
 	}
 	
 	
-	static void demonstrateDucks(Duck[] duckArray){
+	static void demonstrateDucks(Duck[] duckArray) {
 		
-		for (Duck d : duckArray){
+		for (Duck d : duckArray) {
 			d.display();			
 
 			System.out.print("\t, then it swims like this: ");
@@ -34,11 +34,11 @@ class Runner {
 			System.out.print("\t, and makes a ");
 				d.quack();	
 				
-			//ADDING instanceof here so message only prints if
+			// ADDING instanceof here so message only prints if
 			//		the Object is a FlyingDuck type
-			if( d instanceof FlyingDuck ){
+			if(d instanceof FlyingDuck) {
 				System.out.print("\t, and flys off: ");
-					((FlyingDuck)d).fly();				//the cast is required now though
+					((FlyingDuck)d).fly();				// the cast is required now though
 			}
 			System.out.println("\n\n");
 		}

@@ -4,10 +4,9 @@
  *			else
  *  			subclass Duck
  */
-abstract class FlyingDuck extends Duck{
+abstract class FlyingDuck extends Duck {
 	
 	void fly() {
-		System.out.println("<<"+this.getClass().getName()+" fly style>>");
+		System.out.println("<<" + this.getClass().getName() + " fly style>>");
 	}
-
 }

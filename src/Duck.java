@@ -6,20 +6,19 @@
 abstract class Duck {
 
     Duck() {
-        System.out.println(" a "+this.getClass().getName());
+        System.out.println(" a " + this.getClass().getName());
     }
 
     void quack() {
-        System.out.println("<<"+this.getClass().getName()+" quack sound>>");
+        System.out.println("<<" + this.getClass().getName() + " quack sound>>");
     }
 
     void swim() {
-        System.out.println("<<"+this.getClass().getName()+" swim style>>");
+        System.out.println("<<" + this.getClass().getName() + " swim style>>");
     }
 
     //We have pushed the fly() method down to the FlyingDuck class.
 
     //Force sub-classes to implement a display() method
     abstract void display();
-
 }

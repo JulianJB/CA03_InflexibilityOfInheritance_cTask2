@@ -3,6 +3,7 @@
  */
 class DecoyDuck extends Duck { //extends FlyingDuck { //?
 
+    @Override
     void display() {
         System.out.println("DecoyDuck floats on the water");
     }
