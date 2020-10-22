@@ -1,5 +1,5 @@
 // For a type of duck that can swim and fly
-abstract class SwimmingFlyingDuck extends Duck {
+abstract class SwimmingFlyingDuck extends Duck { // Not being used, created to demonstrate class explosion in Java
 
     // As in Java inheritance is constrained to one super class,
     // it is required to duplicate the swim() method for every

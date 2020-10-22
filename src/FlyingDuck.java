@@ -4,7 +4,7 @@
  *			else
  *  			subclass Duck
  */
-abstract class FlyingDuck extends Duck {
+abstract class FlyingDuck extends Duck { // Not being used, created to demonstrate class explosion in Java
 
 	// As in Java inheritance is constrained to one super class,
 	// it is required to duplicate the fly() method for every

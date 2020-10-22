@@ -1,5 +1,5 @@
 // For a type of duck that can quack and fly
-abstract class QuackingFlyingDuck extends Duck {
+abstract class QuackingFlyingDuck extends Duck { // Not being used, created to demonstrate class explosion in Java
 
     // As in Java inheritance is constrained to one super class,
     // it is required to duplicate the quack() method for every

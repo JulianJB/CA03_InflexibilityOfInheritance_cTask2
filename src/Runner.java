@@ -29,31 +29,40 @@ class Runner {
 		for (Duck d : duckArray) {
 			d.display();
 
-			// switch (d)
+			// We know for this example that there are only three types of ducks:
+			// - QuackingSwimmingFlyingDuck: for mallard ducks and red head ducks
+			// - QuackingSwimmingDuck: for rubber ducks
+			// - SwimmingDuck: for decoy ducks
 
-			if (d instanceof SwimmingDuck || d instanceof SwimmingFlyingDuck
-					|| d instanceof QuackingSwimmingDuck || d instanceof QuackingSwimmingFlyingDuck) {
+			// So, for simplicity, we only check for these three possible combinations, however,
+			// we should check for all possible combinations involving the different duck behaviors
+			// which should be done by using a switch-case statement and an enum type to avoid
+			// a deeply nested if-else statement.
+
+			if (d instanceof QuackingSwimmingFlyingDuck) { // ADDING instanceof to check for object types
+				// A QuackingSwimmingFlyingDuck can swim
 				System.out.print("\t, then it swims like this: ");
-				((SwimmingDuck)d).swim(); // For simplicity, it should be casted into the appropriate type of duck
+				((QuackingSwimmingFlyingDuck)d).swim(); // the cast is required now though
+				// A QuackingSwimmingFlyingDuck can quack
+				System.out.print("\t, and makes a ");
+				((QuackingSwimmingFlyingDuck)d).quack(); // the cast is required now though
+				// A QuackingSwimmingFlyingDuck can fly
+				System.out.print("\t, and flys off: ");
+				((QuackingSwimmingFlyingDuck)d).fly(); // the cast is required now though
+			} else if (d instanceof QuackingSwimmingDuck) {
+				// A QuackingSwimmingDuck can swim
+				System.out.print("\t, then it swims like this: ");
+				((QuackingSwimmingDuck)d).swim(); // the cast is required now though
+				// A QuackingSwimmingDuck can quack
+				System.out.print("\t, and makes a ");
+				((QuackingSwimmingDuck)d).quack(); // the cast is required now though
+			} else if (d instanceof SwimmingDuck) {
+				// A SwimmingDuck can swim
+				System.out.print("\t, then it swims like this: ");
+				((SwimmingDuck)d).swim(); // the cast is required now though
 			}
 
-			if (d instanceof QuackingSwimmingFlyingDuck
-					|| d instanceof QuackingSwimmingDuck) { // For simplicity, it should check for all possible combinations involving the quack behavior
-				System.out.print("\t, and makes a ");
-				((QuackingSwimmingFlyingDuck)d).quack(); // For simplicity, it should be casted into the appropriate type of duck
-			}
-				
-			// ADDING instanceof here so message only prints if
-			//		the Object is a FlyingDuck type
-			if(d instanceof FlyingDuck) {
-				System.out.print("\t, and flys off: ");
-					((FlyingDuck)d).fly();				// the cast is required now though
-			}
 			System.out.println();
 		}
-	}
-
-	enum DucksEnum {
-
 	}
 }

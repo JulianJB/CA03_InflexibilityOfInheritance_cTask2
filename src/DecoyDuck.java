@@ -1,7 +1,8 @@
 /*
  * ADDED: this class to represent a DecoyDuck
  */
-class DecoyDuck extends NonFlyingNonQuackingDuck { // now extends NonFlyingNonQuackingDuck class
+// class DecoyDuck extends NonFlyingNonQuackingDuck { // now extends NonFlyingNonQuackingDuck class
+class DecoyDuck extends SwimmingDuck { // now extends SwimmingDuck class
 
     @Override
     void display() {
