@@ -3,7 +3,7 @@
  *	and RubberDuck can now just inherit 
  *	swim() and quack()
  */
- class RubberDuck extends Duck {
+ class RubberDuck extends QuackingSwimmingDuck { // now extends QuackingSwimmingDuck class
  
 	// This is an improvement over the previous version.
 	// We're overriding quack to make it "squeak" for the RubberDuck

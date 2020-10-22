@@ -27,12 +27,21 @@ class Runner {
 	static void demonstrateDucks(Duck[] duckArray) {
 		
 		for (Duck d : duckArray) {
-			d.display();			
+			d.display();
 
-			System.out.print("\t, then it swims like this: ");
-				d.swim();				
-			System.out.print("\t, and makes a ");
-				d.quack();	
+			// switch (d)
+
+			if (d instanceof SwimmingDuck || d instanceof SwimmingFlyingDuck
+					|| d instanceof QuackingSwimmingDuck || d instanceof QuackingSwimmingFlyingDuck) {
+				System.out.print("\t, then it swims like this: ");
+				((SwimmingDuck)d).swim(); // For simplicity, it should be casted into the appropriate type of duck
+			}
+
+			if (d instanceof QuackingSwimmingFlyingDuck
+					|| d instanceof QuackingSwimmingDuck) { // For simplicity, it should check for all possible combinations involving the quack behavior
+				System.out.print("\t, and makes a ");
+				((QuackingSwimmingFlyingDuck)d).quack(); // For simplicity, it should be casted into the appropriate type of duck
+			}
 				
 			// ADDING instanceof here so message only prints if
 			//		the Object is a FlyingDuck type
@@ -42,5 +51,9 @@ class Runner {
 			}
 			System.out.println();
 		}
+	}
+
+	enum DucksEnum {
+
 	}
 }

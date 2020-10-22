@@ -1,7 +1,7 @@
 /*
  * Now a subclass of FlyingDuck
  */
- class RedHeadDuck extends FlyingDuck {
+ class RedHeadDuck extends QuackingSwimmingFlyingDuck { // now extends QuackingSwimmingFlyingDuck class
 
  	@Override
 	 void display() {
